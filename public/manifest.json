@@ -1,0 +1,12 @@
+{
+  "name": "MistiRinai",
+  "short_name": "MistiRinai",
+  "description": "A private place for the moments that matter.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1C0F15",
+  "theme_color": "#402030",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
