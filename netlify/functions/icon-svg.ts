@@ -43,7 +43,7 @@ export const handler: Handler = async (event) => {
     statusCode: 200,
     headers: {
       "Content-Type": "image/svg+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=60, must-revalidate",
+          "Cache-Control": "public, max-age=86400, must-revalidate",
     },
     body: svg,
   };
