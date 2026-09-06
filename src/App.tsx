@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import { AnimatePresence, motion } from "framer-motion";
 import { AuthProvider, useAuth } from "@/context/AuthContext";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { AppearanceProvider } from "@/context/AppearanceContext";
 import { ToastProvider, useToast } from "@/context/ToastContext";
 import { onUnauthorized } from "@/lib/api";
 import { LoginPage } from "@/pages/LoginPage";
@@ -107,24 +108,26 @@ function AppShell() {
 export default function App() {
   return (
     <ThemeProvider>
-      <ToastProvider>
-        <BrowserRouter>
-          <AuthProvider>
-            <SessionWatcher />
-            <Routes>
-              <Route path="/login" element={<LoginPage />} />
-              <Route
-                path="/*"
-                element={
-                  <RequireAuth>
-                    <AppShell />
-                  </RequireAuth>
-                }
-              />
-            </Routes>
-          </AuthProvider>
-        </BrowserRouter>
-      </ToastProvider>
+      <AppearanceProvider>
+        <ToastProvider>
+          <BrowserRouter>
+            <AuthProvider>
+              <SessionWatcher />
+              <Routes>
+                <Route path="/login" element={<LoginPage />} />
+                <Route
+                  path="/*"
+                  element={
+                    <RequireAuth>
+                      <AppShell />
+                    </RequireAuth>
+                  }
+                />
+              </Routes>
+            </AuthProvider>
+          </BrowserRouter>
+        </ToastProvider>
+      </AppearanceProvider>
     </ThemeProvider>
   );
 }

@@ -24,7 +24,7 @@ export function MobileNav({ onAddMemory }: { onAddMemory: () => void }) {
               key="add"
               onClick={onAddMemory}
               aria-label="Add memory"
-              className="-mt-6 flex h-12 w-12 items-center justify-center rounded-full bg-booth-plum-600 text-white shadow-glow active:scale-95 dark:bg-booth-gold-500 dark:text-booth-night"
+              className="-mt-6 flex h-12 w-12 items-center justify-center rounded-full accent-bg shadow-glow active:scale-95"
             >
               <Icon size={22} />
             </button>
@@ -38,9 +38,7 @@ export function MobileNav({ onAddMemory }: { onAddMemory: () => void }) {
             className={({ isActive }) =>
               clsx(
                 "flex flex-col items-center gap-0.5 rounded-lg px-3 py-1 text-[11px] font-medium",
-                isActive
-                  ? "text-booth-plum-600 dark:text-booth-gold-400"
-                  : "text-booth-ink/50 dark:text-booth-paper/50"
+                isActive ? "accent-text" : "text-booth-ink/50 dark:text-booth-paper/50"
               )
             }
           >

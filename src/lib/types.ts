@@ -72,4 +72,7 @@ export interface AppSettings {
   default_sort: "newest" | "oldest" | "recently_updated" | "alphabetical";
   date_format: string;
   time_format: "12h" | "24h";
+  icon_bg_color: string;
+  icon_letter_color: string;
+  site_theme_color: string;
 }

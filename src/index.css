@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --accent: #402030;
+    --accent-ink: #fbf4ee;
+  }
   html {
     @apply scroll-smooth;
   }
@@ -32,6 +36,13 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+  .accent-bg {
+    background-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .accent-text {
+    color: var(--accent);
   }
 }
 

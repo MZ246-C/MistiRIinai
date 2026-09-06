@@ -41,7 +41,7 @@ export function Header({
             transition={{ duration: 0.4 }}
             className="inline-flex"
           >
-            <Heart size={20} className="fill-booth-gold-400 text-booth-gold-500" />
+            <Heart size={20} className="accent-text fill-current" />
           </motion.span>
           <span className="hidden sm:inline">MistiRinai</span>
         </NavLink>
@@ -56,7 +56,7 @@ export function Header({
                 clsx(
                   "rounded-lg px-3 py-1.5 text-sm font-medium transition-colors",
                   isActive
-                    ? "bg-booth-plum-600 text-white dark:bg-booth-gold-500 dark:text-booth-night"
+                    ? "accent-bg"
                     : "text-booth-ink/70 hover:bg-booth-plum-50 dark:text-booth-paper/70 dark:hover:bg-white/5"
                 )
               }
@@ -76,7 +76,7 @@ export function Header({
           </button>
           <button
             onClick={onAddMemory}
-            className="hidden items-center gap-1.5 rounded-xl bg-booth-plum-600 px-3.5 py-2 text-sm font-medium text-white shadow-soft transition-transform active:scale-95 hover:bg-booth-plum-700 dark:bg-booth-gold-500 dark:text-booth-night dark:hover:bg-booth-gold-400 sm:flex"
+            className="hidden items-center gap-1.5 rounded-xl accent-bg px-3.5 py-2 text-sm font-medium shadow-soft transition-transform hover:brightness-110 active:scale-95 sm:flex"
           >
             <Plus size={16} /> Add memory
           </button>
